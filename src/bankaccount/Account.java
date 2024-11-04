@@ -3,9 +3,11 @@ package bankaccount;
 import java.util.Random;
 
 public class Account {
+    //Attributes
     private String countNumber;
     private double saldo;
 
+    //Constructor
     public Account() {
         Random rnd = new Random();
         String cuentaRandom = "ES";
@@ -16,6 +18,7 @@ public class Account {
         this.saldo = 0;
     }
 
+//Getters and Setters
     public String getCountNumber() {
         return countNumber;
     }
@@ -32,6 +35,7 @@ public class Account {
         this.saldo = saldo;
     }
 
+//Methods
     @Override
     public String toString() {
         return "Cuenta{" +
