@@ -13,6 +13,6 @@ public class Main {
         account.withdrawMoney(10);
         System.out.println(account);
 // consultar saldo
-        System.out.println(account.getSaldo());
+        System.out.println(account.getBalance());
     }
 }

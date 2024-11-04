@@ -4,56 +4,61 @@ import java.util.Random;
 
 public class Account {
     //Attributes
-    private String countNumber;
-    private double saldo;
+    private String accountNumber;
+    private double balance;
 
     //Constructor
     public Account() {
+        this.accountNumber = createAccount();
+        this.balance = 0;
+    }
+
+    //Method for create random account
+    private String createAccount() {
         Random rnd = new Random();
-        String cuentaRandom = "ES";
+        StringBuilder accountRandom = new StringBuilder("ES");
         for (int i = 0; i <= 22 ; i++) {
-            cuentaRandom += rnd.nextInt(0,10);
+            accountRandom.append(rnd.nextInt(0, 10));
         }
-        this.countNumber = cuentaRandom;
-        this.saldo = 0;
+       return accountRandom.toString();
     }
 
-//Getters and Setters
-    public String getCountNumber() {
-        return countNumber;
+    //Getters and Setters
+    public String getAccountNumber() {
+        return accountNumber;
     }
 
-    public void setCountNumber(String countNumber) {
-        this.countNumber = countNumber;
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
     }
 
-    public double getSaldo() {
-        return saldo;
+    public double getBalance() {
+        return balance;
     }
 
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
 //Methods
     @Override
     public String toString() {
         return "Cuenta{" +
-                "countNumber='" + countNumber + '\'' +
-                ", saldo=" + saldo +
+                "accountNumber='" + accountNumber + '\'' +
+                ", balance=" + balance +
                 '}';
     }
 
     public Double depositingMoney(int saldo){
         if (saldo > 0)
-            this.saldo += saldo;
-        return this.saldo;
+            this.balance += saldo;
+        return this.balance;
     }
 
     public Double withdrawMoney(int withdrawAmount) {
-        if (withdrawAmount <= this.saldo && withdrawAmount > 0){
-            this.saldo -= withdrawAmount;
+        if (withdrawAmount <= this.balance && withdrawAmount > 0){
+            this.balance -= withdrawAmount;
         }
-        return this.saldo;
+        return this.balance;
     }
 }

@@ -50,15 +50,15 @@ You are tasked with implementing a banking system that manages account informati
 This class represents a bank account with the following attributes and methods:
 
 - **Attributes:**
-    - `String countNumber`: Unique account identifier, auto-generated in the format "ES" + 22 random digits.
-    - `double saldo`: Represents the account balance, initialized to 0.
+    - `String accountNumber`: Unique account identifier, auto-generated in the format "ES" + 22 random digits.
+    - `double balance`: Represents the account balance, initialized to 0.
 
 - **Methods:**
     - **Constructor `Account()`**: Initializes a new account with a unique number and a balance of 0.
     - **`String getCountNumber()`**: Returns the unique account number.
-    - **`void setCountNumber(String countNumber)`**: Sets a custom account number.
+    - **`void setCountNumber(String accountNumber)`**: Sets a custom account number.
     - **`double getSaldo()`**: Returns the current account balance.
-    - **`void setSaldo(double saldo)`**: Sets the account balance.
+    - **`void setSaldo(double balance)`**: Sets the account balance.
     - **`Double depositingMoney(int amount)`**: Adds funds to the account if `amount` is positive.
     - **`Double withdrawMoney(int amount)`**: Withdraws funds if `amount` is positive and does not exceed the balance.
     - **`String toString()`**: Returns a string representation of the account.
