@@ -45,9 +45,8 @@ public class Account {
     }
 
     public Double depositingMoney(int saldo){
-        if (saldo > 0){
-            this.saldo = saldo;
-        }
+        if (saldo > 0)
+            this.saldo += saldo;
         return this.saldo;
     }
 
