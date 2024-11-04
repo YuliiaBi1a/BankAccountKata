@@ -10,7 +10,6 @@ public class Main {
 // retirar dinero: si es un número negativo o mayor que saldo, el saldo no cambia
         account.withdrawMoney(10);
         System.out.println(account);
-
 // consultar saldo
         System.out.println(account.getSaldo());
     }
